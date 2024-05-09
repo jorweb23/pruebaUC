@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>LibrosVenta</title>
+</head>
+<body>
+
+<div class="container">
+	<div class="title-container">
+
+	<h2 class="page-title">Catálogo de libros físicos para la venta</h2>
+	
+</div>
+    <div class="carousel">
+        
+        <div class="carrusel-list" id="carrusel-list">
+			<div class="carrusel-track">
+				<div class="carrusel">
+					<div class="book-container">
+						<div class="tooltip">
+							<div class="tooltip-content">
+								<p>Astrid Camargo</p>
+								<p>ISBN: 9789588927305</p>
+								<p>Precio: $17.200</p>
+							</div>
+							<picture>
+								<img src="images/libros/analisisprospectivo.jpg" alt="Análisis Prospectivo">
+							</picture>
+						</div>
+					</div>
+            </div>
+            <div class="carrusel">
+                <div class="book-container">
+                    <div class="tooltip">
+                        <div class="tooltip-content">
+                            <p>Autor: Agustin Gongora/ Aureliana Hernandez</p>
+                            <p>ISBN: 9789588927022</p>
+                            <p>Precio: $25.000</p>
+                        </div>
+                        <picture>
+                            <img src="images/libros/aspectosvaca.jpg" alt="Otro Título">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+			
+			 <div class="carrusel">
+                <div class="book-container">
+                    <div class="tooltip">
+                        <div class="tooltip-content">
+							<p>Felix Diaz / Sergio Cerponi</p>
+                            <p>ISBN: 9588927437</p>
+                            <p>Precio: $63.000</p>
+                        </div>
+                        <picture>
+                            <img src="images/libros/bioquimicavete.jpg" alt="Análisis Prospectivo">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="carrusel">
+                <div class="book-container">
+                    <div class="tooltip">
+                        <div class="tooltip-content">
+                            <p>Autor: Carlos E. Pachon</p>
+                            <p>ISBN: 9589728979</p>
+                            <p>Precio: $6.000</p>
+                        </div>
+                        <picture>
+                            <img src="images/libros/casadesuso.jpg" alt="Otro Título">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+			
+			 <div class="carrusel">
+                <div class="book-container">
+                    <div class="tooltip">
+                        <div class="tooltip-content">
+                            <p>Autor: Jose Corredor / Carlos Sejin</p>
+                            <p>ISBN: 9789589906941</p>
+                            <p>Precio: $20.000</p>
+                        </div>
+                        <picture>
+                            <img src="images/libros/chiguiro.jpg" alt="Análisis Prospectivo">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="carrusel">
+                <div class="book-container">
+                    <div class="tooltip">
+                        <div class="tooltip-content">
+                            <p>Javier Castro</p>
+                            <p>ISBN: 9789588927411 </p>
+                            <p>Precio: $22.000</p>
+                        </div>
+                        <picture>
+                            <img src="images/libros/circuitoselec.jpg" alt="Otro Título">
+                        </picture>
+                    </div>
+					
+                </div>
+            </div>
+            <!-- Agrega aquí los otros libros -->
+        </div>
+		</div>
+        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+            <!-- Botón de anterior -->
+        </button>
+        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+            <!-- Botón de siguiente -->
+        </button>
+    </div>
+	
+	<!-- Botones fuera del carrusel -->
+    <div class="additional-buttons">
+        <button class="buy-button">Proceso de compra de libro físico</button>
+        <button class="digital-catalog-button">Catálogo de libros digitales para la venta</button>
+    </div>
+	</div>
+    <script src="scripts/script.js"></script>
+	
+	
+</body>
+</html>

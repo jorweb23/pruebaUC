@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex !important;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background: white;
+}
+
+h2, h4, small, a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: red; /* Cambio de color de la letra a rojo */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Usa min-height en lugar de height */
+    padding-top: 80px; /* Agrega un relleno superior para compensar el margen del título */
+	z-index: 0; /* Ajustamos el índice z para que esté detrás del título */
+}
+
+.title-container {
+    margin-bottom: 20px; /* Aumentamos el espacio entre el título y el carrusel */
+    position: fixed; /* Cambiamos el posicionamiento a fijo */
+    top: 10px; /* Ajustamos la posición desde la parte superior */
+    width: 100%; /* Aseguramos que ocupe todo el ancho */
+    z-index: 2; /* Ajustamos el índice z para que esté encima del carrusel */
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin: 0; /* Elimina el margen para evitar espacio innecesario */
+}
+
+.carousel {
+    width: 100%;
+    margin-bottom: 80px; /* Aumentamos el espacio entre el carrusel y los botones */
+    z-index: 0; /* Ajustamos el índice z para que esté detrás del título */
+}
+
+@media (min-width: 768px) {
+    .carousel {
+        margin: 0 60px;
+    }
+}
+
+.carrusel-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 505px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+
+.carrusel-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+
+.carrusel {
+    position: relative;
+    width: 210px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.carrusel h4 {
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.carrusel h4 small {
+    font-size: 15px;
+    display: block;
+}
+
+.carrusel img {
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .carrusel {
+        width: 275px;
+    }
+    .carrusel img {
+        width: 250px;
+    }
+}
+
+.carrusel-arrow {
+    border-radius: 50%; /* Hace que los botones sean redondos */
+    background-color: black; /* Color de fondo blanco */
+    position: absolute;
+    z-index: 4;
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    text-align: center;
+    border: 2px solid #000000; /* Borde de 2px sólido negro */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s; /* Transición suave */
+}
+
+.carrusel-arrow:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+    border-color: #333333; /* Borde más oscuro al pasar el ratón */
+}
+
+.carrusel-arrow svg {
+    width: 70%; /* Ajusta el tamaño del icono */
+    height: auto;
+    fill: rgba(0, 0, 0, 0.7); /* Color del icono */
+}
+
+.carrusel-prev {
+    left: 0px;
+}
+
+.carrusel-next {
+    right: 0px;
+}
+
+.additional-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px; /* Aumentamos el espacio entre el carrusel y los botones */
+}
+.buy-button,
+.digital-catalog-button {
+    margin-top: 20px; /* Aumentamos el espacio entre los botones */
+    padding: 10px 20px;
+    border-radius: 20px; /* Bordes redondos */
+    background-color: red; /* Color de fondo */
+    color: black; /* Color del texto */
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none; /* Quitamos el borde */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.buy-button:hover,
+.digital-catalog-button:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+    color: #222222; /* Color del texto al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de levantar ligeramente al pasar el ratón */
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip-content {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(188, 240, 12, 0.9);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 100px;
+    overflow-y: auto;
+    max-height: 80px;
+    font-size: 9px; /* Tamaño de fuente más pequeño */
+    line-height: 1; /* Espaciado entre líneas */
+	color:black;
+}
+
+
+
+.tooltip-content p {
+    margin-bottom: 8px; /* Espaciado inferior entre párrafos */
+}
+
+.tooltip:hover .tooltip-content {
+    display: block;
+}
